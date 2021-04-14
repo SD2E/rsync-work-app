@@ -1,0 +1,15 @@
+{
+  "name": "rsync-work-vaughn-job-1618427128246",
+  "appId": "rsync-work-vaughn-0.1.0",
+  "batchQueue": "normal",
+  "maxRunTime": "47:00:00",
+  "memoryPerNode": "1GB",
+  "nodeCount": 1,
+  "processorsPerNode": 1,
+  "archive": false,
+  "inputs": {},
+  "parameters": {
+    "force_sync": true
+  },
+  "notifications": []
+}

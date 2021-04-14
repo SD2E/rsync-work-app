@@ -1,0 +1,42 @@
+{
+  "checkpointable": false,
+  "name": "{{ app.name }}-{{ username }}",
+  "executionSystem": "hpc-tacc-stampede2-{{ username }}",
+  "executionType": "HPC",
+  "deploymentPath": "{{ username }}/apps/{{ app.name }}-{{ username }}-{{ app.version }}",
+  "deploymentSystem": "{{ app.deployment_system }}",
+  "helpURI": "",
+  "label": "{{ app.label }}",
+  "shortDescription": "{{ app.description }}",
+  "longDescription": "",
+  "modules": [],
+  "ontology": [],
+  "parallelism": "SERIAL",
+  "tags": [],
+  "templatePath": "runner.sh",
+  "testPath": "tester.sh",
+  "version": "{{ app.version }}",
+  "defaultQueue": "normal",
+  "defaultMaxRunTime": "47:00:00",
+  "inputs": [],
+  "parameters": [
+    {
+      "id": "force_sync",
+      "details": {"label": "Force rsync even if marked complete"},
+      "value": {
+        "type": "bool",
+        "default": false
+      }
+    },
+    {
+      "id": "user_email",
+      "details": {"label": "Email to send rsync completion notice"},
+      "value": {
+        "type": "string",
+        "default": "{{ email }}",
+        "visible":false
+      }
+    }
+  ],
+  "outputs": []
+}
